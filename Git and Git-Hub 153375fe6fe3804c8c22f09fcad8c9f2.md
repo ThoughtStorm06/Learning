@@ -660,3 +660,39 @@ git branch -a
 ```
 
 ---
+
+# Advanced Git-Hub
+
+### **Summary of Steps**:
+
+1. **Clone the repository without checking out files**:
+    
+    `git clone --no-checkout <repository-url>`
+    
+2. **Initialize sparse checkout**:
+    
+    `git sparse-checkout init --cone`
+    
+3. **Set the files you want to download**:
+    
+    `git sparse-checkout set <file subfolder-path>`
+    
+4. **Checkout the branch**:
+    
+    `git checkout set <file-path>`
+    
+5. **(Optional) Copy the file to another directory**:
+    
+    `cp <path-to-fetched-file> <destination-directory>`
+    
+6. **Stage the file**:
+    
+    `git add <destination-directory>/<file-name>`
+    
+7. **Commit the file**:
+    
+    `git commit -m "Added <file-name> from <repository-name>"`
+    
+8. **Push the commit to the remote repository**:
+    
+    `git push origin <your-branch>`
